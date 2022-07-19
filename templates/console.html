@@ -1,0 +1,27 @@
+<script>
+  document.body.addEventListener('keydown', function (e) {
+    if (e.keyCode === 13) {
+      // document.getElementById("output").innerHTML += "<br/>" + document.getElementById("thecommand").value;
+      var inputBox = document.getElementById("thecommand");
+      var whatDo = inputBox.value;
+      inputBox.value = "";
+      // Function to do an Ajax call
+      $.ajax({
+
+              url:"/run/"+whatDo,
+              type:"GET",
+              success: function(data) {
+                document.getElementById("output").innerHTML += "<br/>" + data;
+              },
+      });
+    }
+});
+</script>
+<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping">$</span>
+  <input id="thecommand" type="text" class="form-control" placeholder="" aria-label="Shell" aria-describedby="addon-wrapping">
+</div>
+<pre>
+  <code id="output">
+  </code>
+</pre>
