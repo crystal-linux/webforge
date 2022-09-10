@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/base" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/crystal-dev" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/crystal-keyring" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/filesystem" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/gnome-shell-extension-arch-update" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/gnome-shell-extension-caffeine" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/gnome-shell-extension-dash-to-panel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/gnome-shell-extension-desktop-icons-neo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/gnome-shell-extension-gsconnect" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/grub-theme" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/lsb-release" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/neofetch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/onyx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/pfetch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/pkg-warner" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/timeshift" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/timeshift-autosnap" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/any/wallpapers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/x86_64/amethyst" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/x86_64/grub" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/x86_64/jade" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/x86_64/jade-gui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/x86_64/malachite" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/conf/x86_64/zramd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages" vcs="Git" />
+  </component>
+</project>

@@ -1,15 +1,12 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{product}} - {{page}}</title>
-    <link href="/static/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>{{product}} - {{page}}</h1>
-    {{content|safe}}
-    <script src="/static/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="/static/jquery-3.6.0.min.js"></script>
-  </body>
+<html>
+<head>
+    <title>Web Forge: {{page_title}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Web Forge: {{page_title}}</h1>
+        {{content|safe}}
+    </div>
+</body>
 </html>

@@ -1,0 +1,6 @@
+dst: conf
+has_subdirs: true
+src: git@github.com:crystal-linux/mlc-repos.git
+subdirs:
+- any
+- x86_64
