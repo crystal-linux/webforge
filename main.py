@@ -1,9 +1,10 @@
 # Stdlib
-import os,yaml
+import os, yaml
 
 # Pip
 import flask_login
-from flask import Flask,render_template,request,redirect,make_response
+from flask import Flask, render_template, request, redirect, make_response
+from flask_login import login_required
 
 # In-house
 from utils import run_command_shell
@@ -22,6 +23,7 @@ mlc = mlcmgr()
 
 class User(flask_login.UserMixin):
     pass
+
 
 @login_manager.user_loader
 def user_loader(uid):
@@ -81,13 +83,55 @@ def logout():
     flask_login.logout_user()
     return redirect("/")
 
+
 @app.route("/")
 def main():
     if not flask_login.current_user.is_authenticated:
         pc = "<a href='/login'>Login</a>"
     else:
-        pc = f"<p>Hi, {flask_login.current_user.id}</p>" + render_template("logout.html")
+        pc = f"<p>Hi, {flask_login.current_user.id}</p>" + render_template(
+            "logout.html"
+        ) + "<br/><h3>All repos:</h3>" + mlc.html_repo_list()
     return render_template("page.html", page_title="Home", content=pc)
+
+
+@app.route("/repos/<name>")
+@login_required
+def getrepo(name):
+    if not mlc.config["has_subdirs"]:
+        return "This repo doesn't have subdirs. Use: TODO: new handler"
+    else:
+        return render_template(
+            "page.html",
+            page_title=f"Repo Info - {name}",
+            content=mlc.html_list_packages(name),
+        )
+
+
+@app.route("/packages/<repo>/<name>")
+@login_required
+def getpackage(repo, name):
+    if not mlc.config["has_subdirs"]:
+        return "This repo doesn't have subdirs. Use: TODO: new handler"
+    else:
+        return render_template(
+            "page.html",
+            page_title=f"Package info - {name}",
+            content=mlc.pkg_page(name, repo),
+        )
+
+
+@app.route("/pkgbuild/<repo>/<name>")
+@login_required
+def getpkgbuild(repo, name):
+    if not mlc.config["has_subdirs"]:
+        return "This repo doesn't have subdirs. Use: TODO: new handler"
+    else:
+        return render_template(
+            "page.html",
+            page_title=f"PKGBUILD for - {name}",
+            content=f"<pre><code>{mlc.dump_pkgbuild(name, repo)}</code></pre>",
+        )
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-import asyncio,threading
+import asyncio, threading
 
 # Maybe add: https://docs.python.org/3/library/shlex.html#shlex.quote ?
 async def run_command_shell(command, grc=False):

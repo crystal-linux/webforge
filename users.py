@@ -1,9 +1,8 @@
-import os,yaml
+import os, yaml
 from passlib.hash import pbkdf2_sha256
 
 
 class usermgr:
-
     def __init__(self):
         if not os.path.exists("db"):
             os.makedirs("db")
