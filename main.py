@@ -8,7 +8,7 @@ from flask_login import login_required
 
 # In-house
 from utils import run_command_shell
-from users import usermgr
+from simpleusers import usermgr
 from mlcmanager import mlcmgr
 
 app = Flask(__name__)

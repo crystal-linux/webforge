@@ -2,6 +2,6 @@ Flask[async]
 flask-login
 Flask-Limiter
 PyYAML
-passlib
 black
 gunicorn
+simpleusers
